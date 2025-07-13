@@ -753,10 +753,10 @@ public class GameControllerScript : MonoBehaviour
 	private int[] itemSelectOffset;
 
 	// Token: 0x0400062B RID: 1579
-	private bool gamePaused;
+	public bool gamePaused;
 
 	// Token: 0x0400062C RID: 1580
-	private bool learningActive;
+	public bool learningActive;
 
 	// Token: 0x0400062D RID: 1581
 	private float gameOverDelay;

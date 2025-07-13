@@ -73,6 +73,7 @@ public class PlayerScript : MonoBehaviour
 				this.sensitivity = 1f;
 				if (this.cc.velocity.magnitude > 0.1f & !this.hugging & !this.sweeping)
 				{
+					Camera.main.fieldOfView = Mathf.LerpAngle(Camera.main.fieldOfView, 75f, 1.5f * Time.deltaTime);
 					this.ResetGuilt("running", 0.1f);
 				}
 			}
@@ -81,6 +82,7 @@ public class PlayerScript : MonoBehaviour
 				this.playerSpeed = this.walkSpeed;
 				if (this.sensitivityActive)
 				{
+					Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60f, 6f * Time.deltaTime);
 					this.sensitivity = Mathf.Clamp((vector2 + vector).magnitude, 0f, 1f);
 				}
 				else
@@ -94,6 +96,7 @@ public class PlayerScript : MonoBehaviour
 			this.playerSpeed = this.walkSpeed;
 			if (this.sensitivityActive)
 			{
+				Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60f, 30f * Time.deltaTime);
 				this.sensitivity = Mathf.Clamp((vector2 + vector).magnitude, 0f, 1f);
 			}
 			else

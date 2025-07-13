@@ -40,11 +40,14 @@ public class CameraScript : MonoBehaviour
 	// Token: 0x0600092F RID: 2351 RVA: 0x00020DD8 File Offset: 0x0001F1D8
 	private void LateUpdate()
 	{
+		float num = Input.GetAxis("Mouse Y") * this.ps.mouseSensitivity;
+		FreecamLookX -= num;
+		FreecamLookX = Mathf.Clamp(FreecamLookX, -90f, 90f);
 		base.transform.position = this.player.transform.position + this.offset; //Teleport to the player, then move based on the offset vector(if all other statements fail)
-		if (!this.ps.gameOver & !this.ps.jumpRope)
+		if (!this.ps.gameOver & !this.ps.jumpRope & !FindObjectOfType<GameControllerScript>().gamePaused & !FindObjectOfType<GameControllerScript>().learningActive)
 		{
 			base.transform.position = this.player.transform.position + this.offset; //Teleport to the player, then move based on the offset vector
-			base.transform.rotation = this.player.transform.rotation * Quaternion.Euler(0f, (float)this.lookBehind, 0f); //Rotate based on player direction + lookbehind
+			base.transform.rotation = this.player.transform.rotation * Quaternion.Euler(FreecamLookX, (float)this.lookBehind, 0f); //Rotate based on player direction + lookbehind
 		}
 		else if (this.ps.gameOver)
 		{
@@ -54,7 +57,7 @@ public class CameraScript : MonoBehaviour
 		else if (this.ps.jumpRope)
 		{
 			base.transform.position = this.player.transform.position + this.offset + this.jumpHeightV3; //Apply the jump rope vector onto the normal offset
-			base.transform.rotation = this.player.transform.rotation; //Rotate based on player direction
+			base.transform.rotation = this.player.transform.rotation * Quaternion.Euler(FreecamLookX, (float)this.lookBehind, 0f); //Rotate based on player direction + lookbehind
 		}
 	}
 
@@ -88,4 +91,6 @@ public class CameraScript : MonoBehaviour
 	// Token: 0x040005B9 RID: 1465
 	public Vector3 jumpHeightV3;
 
+	// Token: 0x040005B10 RID: 1466
+	public float FreecamLookX;
 }
