@@ -14,6 +14,11 @@ public class DefaultSettingsScript : MonoBehaviour
 			base.StartCoroutine(this.CloseOptions());
 			this.canvas.enabled = false;
 		}
+
+		if (PlayerPrefs.HasKey("SoundVolume"))
+		{
+			AudioListener.volume = PlayerPrefs.GetFloat("SoundVolume");
+		}
 	}
 
 	// Token: 0x06000029 RID: 41 RVA: 0x00002944 File Offset: 0x00000D44

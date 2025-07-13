@@ -336,6 +336,7 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x06000975 RID: 2421 RVA: 0x0002245C File Offset: 0x0002085C
 	public void CollectItem(int item_ID)
 	{
+		this.audioDevice.PlayOneShot(this.aud_ItemPickup);
 		if (this.item[0] == 0)
 		{
 			this.item[0] = item_ID; //Set the item slot to the Item_ID provided
@@ -799,8 +800,12 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x04000639 RID: 1593
 	public AudioSource learnMusic;
 
-	// Token: 0x0400063A RID: 1594
+	// Token: 0x04000640A RID: 1594
 	public Animator NotebooksAnim;
-	// Token: 0x0400063A RID: 1595
+
+	// Token: 0x04000640A RID: 1595
 	public AudioClip NotebooksSound;
+	
+	// Token: 0x04000641 RID: 1596
+	public AudioClip aud_ItemPickup;
 }

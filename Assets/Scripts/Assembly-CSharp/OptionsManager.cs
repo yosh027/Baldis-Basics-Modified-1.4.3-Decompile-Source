@@ -11,6 +11,7 @@ public class OptionsManager : MonoBehaviour
 		if (PlayerPrefs.HasKey("OptionsSet"))
 		{
 			slider.value = PlayerPrefs.GetFloat("MouseSensitivity");
+			volumeSlider.value = PlayerPrefs.GetFloat("SoundVolume");
 			if (PlayerPrefs.GetInt("Rumble") == 1)
 			{
 				rumble.isOn = true;
@@ -38,6 +39,8 @@ public class OptionsManager : MonoBehaviour
 	private void Update()
 	{
 		PlayerPrefs.SetFloat("MouseSensitivity", slider.value);
+		PlayerPrefs.SetFloat("SoundVolume", volumeSlider.value);
+		AudioListener.volume = PlayerPrefs.GetFloat("SoundVolume");
 		if (rumble.isOn)
 		{
 			PlayerPrefs.SetInt("Rumble", 1);
@@ -64,4 +67,7 @@ public class OptionsManager : MonoBehaviour
 
 	// Token: 0x04000071 RID: 113
 	public Toggle analog;
+
+	// Token: 0x04000072 RID: 114
+	public Slider volumeSlider;
 }
