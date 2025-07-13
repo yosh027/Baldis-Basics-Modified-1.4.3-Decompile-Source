@@ -35,9 +35,7 @@ public class FootstepScript : MonoBehaviour
         
 
     }
-
     public GameControllerScript gc;
-
     public GameObject footstepsWalk;
     public GameObject footstepsRun;
 }
