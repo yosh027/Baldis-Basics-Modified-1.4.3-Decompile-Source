@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 84c29c59cd7f2d348bfae687f35e9811
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 217557570790530445
+    second: NotebookIcon_Sheet_0
+  - first:
+      213: 4635660834146170579
+    second: NotebookIcon_Sheet_1
+  - first:
+      213: 6907623253496954188
+    second: NotebookIcon_Sheet_2
+  - first:
+      213: -3200042476206180202
+    second: NotebookIcon_Sheet_4
+  - first:
+      213: 355249805131855065
+    second: NotebookIcon_Sheet_8
+  - first:
+      213: -3912853562628209409
+    second: NotebookIcon_Sheet_18
+  - first:
+      213: -5222247210634965061
+    second: NotebookIcon_Sheet_19
+  - first:
+      213: -1067146091466658035
+    second: NotebookIcon_Sheet_20
+  - first:
+      213: 9172572733648692953
+    second: NotebookIcon_Sheet_24
+  - first:
+      213: -7373722725750625756
+    second: NotebookIcon_Sheet_26
+  - first:
+      213: -985353699445597091
+    second: NotebookIcon_Sheet_28
+  - first:
+      213: -4304837494486825364
+    second: NotebookIcon_Sheet_3
+  - first:
+      213: -7343389177153733458
+    second: NotebookIcon_Sheet_5
+  - first:
+      213: -1896142875164993559
+    second: NotebookIcon_Sheet_6
+  - first:
+      213: 6179677602462192407
+    second: NotebookIcon_Sheet_7
+  - first:
+      213: -8285659185069503151
+    second: NotebookIcon_Sheet_9
+  - first:
+      213: -3645662781587368724
+    second: NotebookIcon_Sheet_10
+  - first:
+      213: 2883742099024702845
+    second: NotebookIcon_Sheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d19809205496a7647badce9aae9312ab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

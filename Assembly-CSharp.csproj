@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6D340A2D-574B-0119-0F39-59471E8D158F}</ProjectGuid>
+    <ProjectGuid>{2C0E917B-9EBE-52C8-F660-50D00BD9DB4B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,8 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FootstepScript.cs" />
-     <Compile Include="Assets\FOVChanger.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AgentTest.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AILocationSelectorScript.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AlarmClockScript.cs" />
@@ -131,6 +129,8 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp\UiSettings.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\WarningScreenScript.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\YouWonScript.cs" />
+     <Compile Include="Assets\Scripts\FootstepScript.cs" />
+     <Compile Include="Assets\Scripts\FOVChanger.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -151,34 +151,34 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh-Engine-Source/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Games/Baldi&apos;s Basics/Baldi&apos;s Basics Decompiles/Baldis-Basics-Yosh&apos;s-Decompile-Source/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

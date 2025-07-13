@@ -150,11 +150,11 @@ public class GameControllerScript : MonoBehaviour
 	{
 		if (this.mode == "story")
 		{
-			this.notebookCount.text = this.notebooks.ToString() + "/7 Notebooks";
+			this.notebookCount.text = this.notebooks.ToString() + "/7";
 		}
 		else
 		{
-			this.notebookCount.text = this.notebooks.ToString() + " Notebooks";
+			this.notebookCount.text = this.notebooks.ToString() + " ";
 		}
 		if (this.notebooks == 7 & this.mode == "story")
 		{
@@ -289,6 +289,8 @@ public class GameControllerScript : MonoBehaviour
 			this.schoolMusic.Play();
 			this.learnMusic.Stop();
 		}
+		NotebooksAnim.Play("NotebookImageAnimation", -1); 
+		audioDevice.PlayOneShot(NotebooksSound);
 		if (this.notebooks == 1 & !this.spoopMode) // If this is the players first notebook and they didn't get any questions wrong, reward them with a quarter
 		{
 			this.quarter.SetActive(true);
@@ -798,5 +800,7 @@ public class GameControllerScript : MonoBehaviour
 	public AudioSource learnMusic;
 
 	// Token: 0x0400063A RID: 1594
-	//private Player playerInput;
+	public Animator NotebooksAnim;
+	// Token: 0x0400063A RID: 1595
+	public AudioClip NotebooksSound;
 }
