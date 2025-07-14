@@ -2,9 +2,13 @@ Decompile used: https://pspleaffox.itch.io/baldi-open-source-classic-party
 
 Credits from the itch.io page:
 PSPLeafFox: Fixed the decompiles.
+
 Basically games: Owners and Creator of Baldi's Basics.
+
 Jumpman25: Made the original decompiles.
+
 SplintaDinta: Baldi Model
+
 MissingTextureMan101: Made Open Source Baldi.
 
 # Installation Guide
