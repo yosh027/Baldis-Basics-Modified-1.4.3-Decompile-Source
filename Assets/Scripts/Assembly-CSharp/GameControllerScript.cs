@@ -15,7 +15,6 @@ public class GameControllerScript : MonoBehaviour
 		array[0] = -80;
 		array[1] = -40;
 		this.itemSelectOffset = array;
-		//base..ctor();
 	}
 
 	// Token: 0x06000964 RID: 2404 RVA: 0x00021AC4 File Offset: 0x0001FEC4
@@ -227,13 +226,13 @@ public class GameControllerScript : MonoBehaviour
 		this.entrance_3.Lower();
 		this.baldiTutor.SetActive(false); //Turns off Baldi(The one that you see at the start of the game)
 		this.baldi.SetActive(true); //Turns on Baldi
-        this.principal.SetActive(true); //Turns on Principal
-        this.crafters.SetActive(true); //Turns on Crafters
-        this.playtime.SetActive(true); //Turns on Playtime
-        this.gottaSweep.SetActive(true); //Turns on Gotta Sweep
-        this.bully.SetActive(true); //Turns on Bully
-        this.firstPrize.SetActive(true); //Turns on First-Prize
-		//this.TestEnemy.SetActive(true); //Turns on Test-Enemy
+		this.principal.SetActive(true); //Turns on Principal
+		this.crafters.SetActive(true); //Turns on Crafters
+		this.playtime.SetActive(true); //Turns on Playtime
+		this.gottaSweep.SetActive(true); //Turns on Gotta Sweep
+		this.bully.SetActive(true); //Turns on Bully
+		this.firstPrize.SetActive(true); //Turns on First-Prize
+		this.TestEnemy.SetActive(true); //Turns on Test-Enemy
 		this.audioDevice.PlayOneShot(this.aud_Hang); //Plays the hang sound
 		this.learnMusic.Stop(); //Stop all the music
 		this.schoolMusic.Stop();
@@ -262,10 +261,10 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x06000970 RID: 2416 RVA: 0x00022214 File Offset: 0x00020614
 	public void ActivateLearningGame()
 	{
-		//this.camera.cullingMask = 0; //Sets the cullingMask to nothing
 		this.learningActive = true;
 		this.UnlockMouse(); //Unlock the mouse
 		this.tutorBaldi.Stop(); //Make tutor Baldi stop talking
+		audioDevice.PlayOneShot(OpenNotebook); // If YTCP opens, play the sound
 		if (!this.spoopMode) //If the player hasn't gotten a question wrong
 		{
 			this.schoolMusic.Stop(); //Start playing the learn music
@@ -289,7 +288,8 @@ public class GameControllerScript : MonoBehaviour
 			this.schoolMusic.Play();
 			this.learnMusic.Stop();
 		}
-		NotebooksAnim.Play("NotebookImageAnimation", -1); 
+		NotebooksAnim.Play("NotebookImageAnimation", -1);
+
 		audioDevice.PlayOneShot(NotebooksSound);
 		if (this.notebooks == 1 & !this.spoopMode) // If this is the players first notebook and they didn't get any questions wrong, reward them with a quarter
 		{
@@ -345,13 +345,13 @@ public class GameControllerScript : MonoBehaviour
 		else if (this.item[1] == 0)
 		{
 			this.item[1] = item_ID; //Set the item slot to the Item_ID provided
-            this.itemSlot[1].texture = this.itemTextures[item_ID]; //Set the item slot's texture to a texture in a list of textures based on the Item_ID
-        }
+			this.itemSlot[1].texture = this.itemTextures[item_ID]; //Set the item slot's texture to a texture in a list of textures based on the Item_ID
+		}
 		else if (this.item[2] == 0)
 		{
 			this.item[2] = item_ID; //Set the item slot to the Item_ID provided
-            this.itemSlot[2].texture = this.itemTextures[item_ID]; //Set the item slot's texture to a texture in a list of textures based on the Item_ID
-        }
+			this.itemSlot[2].texture = this.itemTextures[item_ID]; //Set the item slot's texture to a texture in a list of textures based on the Item_ID
+		}
 		else //This one overwrites the currently selected slot when your inventory is full
 		{
 			this.item[this.itemSelected] = item_ID;
@@ -367,6 +367,7 @@ public class GameControllerScript : MonoBehaviour
 		{
 			if (this.item[this.itemSelected] == 1)
 			{
+				this.audioDevice.PlayOneShot(this.aud_Cronch);
 				this.player.stamina = this.player.maxStamina * 2f;
 				this.ResetItem();
 			}
@@ -410,11 +411,13 @@ public class GameControllerScript : MonoBehaviour
 				{
 					if (raycastHit3.collider.name == "BSODAMachine" & Vector3.Distance(this.playerTransform.position, raycastHit3.transform.position) <= 10f)
 					{
+						this.audioDevice.PlayOneShot(this.aud_CoinDrop);
 						this.ResetItem();
 						this.CollectItem(4);
 					}
 					else if (raycastHit3.collider.name == "ZestyMachine" & Vector3.Distance(this.playerTransform.position, raycastHit3.transform.position) <= 10f)
 					{
+						this.audioDevice.PlayOneShot(this.aud_CoinDrop);
 						this.ResetItem();
 						this.CollectItem(1);
 					}
@@ -547,7 +550,7 @@ public class GameControllerScript : MonoBehaviour
 		if (this.exitsReached == 1)
 		{
 			RenderSettings.ambientLight = Color.red; //Make everything red and start player the weird sound
-			//RenderSettings.fog = true;
+													 //RenderSettings.fog = true;
 			this.audioDevice.PlayOneShot(this.aud_Switch, 0.8f);
 			this.audioDevice.clip = this.aud_MachineQuiet;
 			this.audioDevice.loop = true;
@@ -765,7 +768,7 @@ public class GameControllerScript : MonoBehaviour
 	private float gameOverDelay;
 
 	// Token: 0x0400062E RID: 1582
-	private AudioSource audioDevice;
+	public AudioSource audioDevice;
 
 	// Token: 0x0400062F RID: 1583
 	public AudioClip aud_Soda;
@@ -803,9 +806,18 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x04000640A RID: 1594
 	public Animator NotebooksAnim;
 
-	// Token: 0x04000640A RID: 1595
+	// Token: 0x04000640B RID: 1595
 	public AudioClip NotebooksSound;
-	
-	// Token: 0x04000641 RID: 1596
+
+	// Token: 0x04000640C RID: 1596
+	public AudioClip OpenNotebook;
+
+	// Token: 0x04000640D RID: 1597
 	public AudioClip aud_ItemPickup;
+
+	// Token: 0x04000640E RID: 1598
+	public AudioClip aud_Cronch;
+
+	// Token: 0x04000640F RID: 1599
+	public AudioClip aud_CoinDrop;
 }

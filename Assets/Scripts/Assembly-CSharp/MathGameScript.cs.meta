@@ -1,13 +1,37 @@
 fileFormatVersion: 2
 guid: d80159bd24c92f849af9e57ecaaba4f5
-timeCreated: 1582106261
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: {}
+  defaultReferences:
+  - gc: {instanceID: 0}
+  - baldiScript: {instanceID: 0}
+  - mathGame: {instanceID: 0}
+  - correct: {instanceID: 0}
+  - incorrect: {instanceID: 0}
+  - playerAnswer: {instanceID: 0}
+  - questionText: {instanceID: 0}
+  - questionText2: {instanceID: 0}
+  - questionText3: {instanceID: 0}
+  - baldiFeed: {instanceID: 0}
+  - baldiFeedTransform: {instanceID: 0}
+  - bal_plus: {instanceID: 0}
+  - bal_minus: {instanceID: 0}
+  - bal_times: {instanceID: 0}
+  - bal_divided: {instanceID: 0}
+  - bal_equals: {instanceID: 0}
+  - bal_howto: {instanceID: 0}
+  - bal_intro: {instanceID: 0}
+  - bal_screech: {instanceID: 0}
+  - firstButton: {instanceID: 0}
+  - baldiAudio: {instanceID: 0}
+  - DingSound: {instanceID: 0}
+  - WrongSound: {instanceID: 0}
+  - audioDevice: {instanceID: 0}
+  - SubmitSound: {instanceID: 0}
+  - ButtonSound: {instanceID: 0}
   executionOrder: 0
-  icon: {fileID: 0}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

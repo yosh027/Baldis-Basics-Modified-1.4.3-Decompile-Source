@@ -1782,7 +1782,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1a192f1c6ef24fa4eb28afa9fde45a06, type: 3}
   - {fileID: 8300000, guid: 5dd789d4f0b9e5a49b1e17d2f0effae9, type: 3}
   firstButton: {fileID: 114077775041605245}
+  audioDevice: {fileID: 0}
   baldiAudio: {fileID: 82212521532976993}
+  CorrectSound: {fileID: 8300000, guid: a2ad732de829ea246bc309856b889e0e, type: 3}
+  IncorrectSound: {fileID: 8300000, guid: 051740c7efae28347b466011cf51a773, type: 3}
+  ButtonSound: {fileID: 8300000, guid: 60b91e1520ac23143a09d15b9c15592d, type: 3}
 --- !u!82 &82212521532976993
 AudioSource:
   m_ObjectHideFlags: 0

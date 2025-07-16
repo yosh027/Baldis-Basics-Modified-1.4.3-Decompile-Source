@@ -1,13 +1,25 @@
 fileFormatVersion: 2
 guid: 3e03bb9b92817464d9b3c48091b4270e
-timeCreated: 1582106254
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: {}
+  defaultReferences:
+  - player: {instanceID: 0}
+  - baldi: {instanceID: 0}
+  - barrier: {instanceID: 0}
+  - trigger: {instanceID: 0}
+  - invisibleBarrier: {instanceID: 0}
+  - inside: {instanceID: 0}
+  - outside: {instanceID: 0}
+  - doorOpen: {instanceID: 0}
+  - doorClose: {instanceID: 0}
+  - closed: {instanceID: 0}
+  - open: {instanceID: 0}
+  - LockSound: {fileID: 8300000, guid: 126a120166b2ba24da5830a5941af80d, type: 3}
+  - Rattling: {fileID: 8300000, guid: 35b19781ae06e6948b28e9cc7f34cfd2, type: 3}
+  - Unlocked: {fileID: 8300000, guid: 5f0290aff4bf123458deb612d2242a26, type: 3}
   executionOrder: 0
-  icon: {fileID: 0}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

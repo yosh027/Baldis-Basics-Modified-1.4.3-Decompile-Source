@@ -1,13 +1,64 @@
 fileFormatVersion: 2
 guid: 28fa0f0ef0a850d40a3c102e4689cb58
-timeCreated: 1582106266
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: {}
+  defaultReferences:
+  - cursorController: {instanceID: 0}
+  - player: {instanceID: 0}
+  - playerTransform: {instanceID: 0}
+  - cameraTransform: {instanceID: 0}
+  - camera: {instanceID: 0}
+  - entrance_0: {instanceID: 0}
+  - entrance_1: {instanceID: 0}
+  - entrance_2: {instanceID: 0}
+  - entrance_3: {instanceID: 0}
+  - baldiTutor: {instanceID: 0}
+  - baldi: {instanceID: 0}
+  - baldiScrpt: {instanceID: 0}
+  - aud_Prize: {instanceID: 0}
+  - aud_PrizeMobile: {instanceID: 0}
+  - aud_AllNotebooks: {instanceID: 0}
+  - principal: {instanceID: 0}
+  - crafters: {instanceID: 0}
+  - playtime: {instanceID: 0}
+  - playtimeScript: {instanceID: 0}
+  - gottaSweep: {instanceID: 0}
+  - bully: {instanceID: 0}
+  - firstPrize: {instanceID: 0}
+  - TestEnemy: {instanceID: 0}
+  - firstPrizeScript: {instanceID: 0}
+  - quarter: {instanceID: 0}
+  - tutorBaldi: {instanceID: 0}
+  - boots: {instanceID: 0}
+  - itemText: {instanceID: 0}
+  - bsodaSpray: {instanceID: 0}
+  - alarmClock: {instanceID: 0}
+  - notebookCount: {instanceID: 0}
+  - pauseMenu: {instanceID: 0}
+  - highScoreText: {instanceID: 0}
+  - warning: {instanceID: 0}
+  - reticle: {instanceID: 0}
+  - itemSelect: {instanceID: 0}
+  - audioDevice: {instanceID: 0}
+  - aud_Soda: {instanceID: 0}
+  - aud_Spray: {instanceID: 0}
+  - aud_buzz: {instanceID: 0}
+  - aud_Hang: {instanceID: 0}
+  - aud_MachineQuiet: {instanceID: 0}
+  - aud_MachineStart: {instanceID: 0}
+  - aud_MachineRev: {instanceID: 0}
+  - aud_MachineLoop: {instanceID: 0}
+  - aud_Switch: {instanceID: 0}
+  - schoolMusic: {instanceID: 0}
+  - learnMusic: {instanceID: 0}
+  - NotebooksAnim: {instanceID: 0}
+  - NotebooksSound: {instanceID: 0}
+  - OpenNotebook: {instanceID: 0}
+  - aud_ItemPickup: {instanceID: 0}
+  - aud_Cronch: {instanceID: 0}
   executionOrder: 0
-  icon: {fileID: 0}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

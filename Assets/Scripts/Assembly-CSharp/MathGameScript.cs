@@ -22,6 +22,7 @@ public class MathGameScript : MonoBehaviour
         {
             this.baldiFeedTransform.position = new Vector3(-1000f, -1000f, 0f);
         }
+        this.audioDevice = base.GetComponent<AudioSource>(); //Get the Audio Source
     }
 
     // Token: 0x06000983 RID: 2435 RVA: 0x00023270 File Offset: 0x00021670
@@ -255,27 +256,21 @@ public class MathGameScript : MonoBehaviour
     public void OKButton()
     {
         this.CheckAnswer();
+        audioDevice.PlayOneShot(ButtonSound);
     }
 
     // Token: 0x06000986 RID: 2438 RVA: 0x00023BC0 File Offset: 0x00021FC0
     public void CheckAnswer()
     {
-        if (this.playerAnswer.text == "31718")
-        {
-            base.StartCoroutine(this.CheatText("THIS IS WHERE IT ALL BEGAN"));
-            SceneManager.LoadSceneAsync("TestRoom");
-        }
-        else if (this.playerAnswer.text == "53045009")
-        {
-            base.StartCoroutine(this.CheatText("USE THESE TO STICK TO THE CEILING!"));
-            this.gc.Fliparoo();
-        }
         if (this.problem <= 3)
         {
+            
             if (this.playerAnswer.text == this.solution.ToString() & !this.impossibleMode)
             {
                 this.results[this.problem - 1].texture = this.correct;
+                
                 this.baldiAudio.Stop();
+
                 this.ClearAudioQueue();
                 int num = Mathf.RoundToInt(UnityEngine.Random.Range(0f, 4f));
                 this.QueueAudio(this.bal_praises[num]);
@@ -284,6 +279,7 @@ public class MathGameScript : MonoBehaviour
             else
             {
                 this.problemsWrong++;
+                
                 this.results[this.problem - 1].texture = this.incorrect;
                 if (!this.gc.spoopMode)
                 {
@@ -304,6 +300,14 @@ public class MathGameScript : MonoBehaviour
                 else
                 {
                     this.baldiScript.GetAngry(1f);
+                }
+                if (this.correct)
+                { 
+                    audioDevice.PlayOneShot(CorrectSound);
+                }
+                if (this.incorrect)
+                { 
+                    audioDevice.PlayOneShot(IncorrectSound);
                 }
                 this.ClearAudioQueue();
                 this.baldiAudio.Stop();
@@ -355,6 +359,7 @@ public class MathGameScript : MonoBehaviour
     // Token: 0x0600098C RID: 2444 RVA: 0x00023E80 File Offset: 0x00022280
     public void ButtonPress(int value)
     {
+        audioDevice.PlayOneShot(ButtonSound);
         if (value >= 0 & value <= 9)
         {
             this.playerAnswer.text = this.playerAnswer.text + value;
@@ -379,7 +384,7 @@ public class MathGameScript : MonoBehaviour
             this.questionText3.text = string.Empty;
             yield return new WaitForEndOfFrame();
         }
-        yield break;
+    
     }
 
     // Token: 0x04000641 RID: 1601
@@ -494,22 +499,14 @@ public class MathGameScript : MonoBehaviour
         "That's more like it...",
         "Keep up the good work or see me after class..."
     };
-
-    // Token: 0x04000664 RID: 1636
     private bool questionInProgress;
-
-    // Token: 0x04000665 RID: 1637
     private bool impossibleMode;
-
-    // Token: 0x04000666 RID: 1638
     private bool joystickEnabled;
-
-    // Token: 0x04000667 RID: 1639
     private int problemsWrong;
-
-    // Token: 0x04000668 RID: 1640
     private AudioClip[] audioQueue = new AudioClip[20];
-
-    // Token: 0x04000669 RID: 1641
+    public AudioSource audioDevice;
     public AudioSource baldiAudio;
+    public AudioClip CorrectSound;
+    public AudioClip IncorrectSound;
+    public AudioClip ButtonSound;
 }
